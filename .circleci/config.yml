@@ -418,9 +418,9 @@ workflows:
       - integrationTests:
           requires:
             - assemble
-      # - acceptanceTests:
-      #     requires:
-      #       - assemble
+      - acceptanceTests:
+          requires:
+            - assemble
       - acceptanceTestsCliqueBft:
           requires:
             - assemble
@@ -443,7 +443,7 @@ workflows:
             - assemble
             - integrationTests
             - unitTests
-            # - acceptanceTests
+            - acceptanceTests
             - referenceTests
             - buildDocker
       - publishDocker:
@@ -456,7 +456,7 @@ workflows:
             - assemble
             - integrationTests
             - unitTests
-            # - acceptanceTests
+            - acceptanceTests
             - referenceTests
             - buildDocker
           context:
@@ -470,7 +470,7 @@ workflows:
           requires:
             - integrationTests
             - unitTests
-            # - acceptanceTests
+            - acceptanceTests
             - referenceTests
             - buildArm64Docker
           context:
